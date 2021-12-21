@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Exercicio3 {
     public static void main(String[] args) {
         int identificador = 1;
+        double valorTotal = 0;
         Produto [] produtos = new Produto[3];
         Scanner sc = new Scanner(System.in);
         for(int i = 0; i<3; i++) {
@@ -15,6 +16,7 @@ public class Exercicio3 {
             System.out.println("Digite a quantidade do produto " + identificador);
             int quantidade = sc.nextInt();
             produtos[i] = new Produto(produto, valor, quantidade);
+            valorTotal+= valor * quantidade;
             identificador++;
         }
         identificador = 1;
@@ -27,6 +29,8 @@ public class Exercicio3 {
             System.out.println();
             identificador++;
         }
+        System.out.println();
+        System.out.println("R$" + valorTotal);
     }
 }
 
