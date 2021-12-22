@@ -16,10 +16,10 @@ public class Exercicio2 {
 
     static double areaMedia(FiguraGeometrica[] arr) {
         double areamedia = 0;
-        for(FiguraGeometrica figura: arr) {
-            areamedia+=figura.area();
+        for (FiguraGeometrica figura : arr) {
+            areamedia += figura.area();
         }
-        return areamedia/arr.length;
+        return areamedia / arr.length;
     }
 }
 
@@ -59,7 +59,7 @@ class Triangulo extends FiguraGeometrica {
 
     @Override
     public double area() {
-        return (base * altura)/2;
+        return (base * altura) / 2;
     }
 }
 

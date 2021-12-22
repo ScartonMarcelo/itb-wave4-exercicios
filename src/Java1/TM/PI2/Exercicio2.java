@@ -7,18 +7,18 @@ public class Exercicio2 {
         int ano = 2021;
         Empresa x = new Empresa(1.13, 1.48);
         Empresa y = new Empresa(18.4, 0.32);
-        while(x.getValor() < y.getValor()) {
-            System.out.println("Ano: " + ano +" | Valor de X: " + x.getFormattedValor() + " | Valor de Y: " + y.getFormattedValor());
+        while (x.getValor() < y.getValor()) {
+            System.out.println("Ano: " + ano + " | Valor de X: " + x.getFormattedValor() + " | Valor de Y: " + y.getFormattedValor());
             x.cresce();
             y.cresce();
             ano++;
         }
-        System.out.println("Ano: " + ano +" | Valor de X: " + x.getFormattedValor() + " | Valor de Y: " + y.getFormattedValor());
+        System.out.println("Ano: " + ano + " | Valor de X: " + x.getFormattedValor() + " | Valor de Y: " + y.getFormattedValor());
     }
 }
 
 class Empresa {
-    private double  valor;
+    private double valor;
     private double crescimento;
     private DecimalFormat df = new DecimalFormat("R$0.00M");
 

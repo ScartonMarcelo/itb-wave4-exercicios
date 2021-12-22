@@ -14,15 +14,15 @@ public class Exercicio5 {
         String dString = Integer.toString(d);
         int i = 0;
         int count;
-        while (n!=0) {
+        while (n != 0) {
             count = 0;
             String numString = Integer.toString(i);
-            for (char c: numString.toCharArray()) {
+            for (char c : numString.toCharArray()) {
                 if (Character.toString(c).equals(dString)) {
                     count++;
                 }
             }
-            if (count>=m) {
+            if (count >= m) {
                 System.out.println(i);
                 n--;
             }

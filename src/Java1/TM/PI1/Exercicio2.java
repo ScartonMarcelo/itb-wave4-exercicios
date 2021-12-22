@@ -9,7 +9,7 @@ public class Exercicio2 {
         int n = sc.nextInt();
         System.out.println("Digite m:");
         int m = sc.nextInt();
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println(i * m + " é múltiplo de m.");
         }
     }
