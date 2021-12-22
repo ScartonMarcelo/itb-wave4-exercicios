@@ -1,8 +1,9 @@
 package Java1.TM.PI2;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 
 public class Exercicio1 {
@@ -14,12 +15,12 @@ public class Exercicio1 {
     }
 
     private static void imprimeCrescente(List<Integer> array) {
-        array.sort(Comparator.naturalOrder());
+        Collections.sort(array);
         System.out.println(array);
     }
 
     private static void imprimeDescrescente(List<Integer> array) {
-        array.sort(Comparator.reverseOrder());
+        Collections.sort(array, Collections.reverseOrder());
         System.out.println(array);
     }
 }
