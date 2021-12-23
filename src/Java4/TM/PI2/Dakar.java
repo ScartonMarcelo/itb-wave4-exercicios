@@ -15,6 +15,7 @@ public class Dakar {
         System.out.println(vencedor);
         meli.socorrerVeiculo(vencedor);
         meli.removerVeiculo(vencedor);
+        meli.removerVeiculoPorPlaca("olo");
         System.out.println(meli.getListaVeiculos());
     }
 }
@@ -139,11 +140,7 @@ class Corrida implements ICorrida<Veiculo> {
 
     @Override
     public void removerVeiculoPorPlaca(String placa) {
-        for (Veiculo v : this.listaVeiculos) {
-            if (v.getPlaca() == placa) {
-                this.listaVeiculos.remove(v);
-            }
-        }
+        this.listaVeiculos.removeIf(v -> v.getPlaca().equals(placa));
     }
 
     @Override
@@ -180,7 +177,7 @@ class Moto extends Veiculo {
     private static final int RODAS = 2;
 
     public Moto(int velocidade, double aceleracao, double anguloDeGiro, String placa) {
-        super(velocidade, aceleracao, anguloDeGiro, placa, 300, 2);
+        super(velocidade, aceleracao, anguloDeGiro, placa, PESO, RODAS);
     }
 }
 
